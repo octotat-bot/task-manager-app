@@ -258,7 +258,7 @@ const TodoList = () => {
         />
         <div className="date-input-container">
           <label htmlFor="dueDate">
-            <span className="date-label-text">Due Date:</span>
+            <span className="date-label-text">Due Date (Optional):</span>
             <span className="date-icon">📅</span>
           </label>
           <div className="date-input-wrapper">
@@ -269,8 +269,7 @@ const TodoList = () => {
               onChange={(e) => setDueDate(e.target.value)}
               className="todo-date"
               min={new Date().toISOString().split('T')[0]}
-              required
-              placeholder="Pick a date"
+              placeholder="Pick a date (optional)"
               data-show-calendar="true"
             />
             {dueDate && (
